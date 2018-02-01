@@ -1,2 +1,2 @@
 # PrefFragment
-An application that shows how to hide / show preferencies dynamically.
+An application that shows how to hide or show preferencies dynamically.
