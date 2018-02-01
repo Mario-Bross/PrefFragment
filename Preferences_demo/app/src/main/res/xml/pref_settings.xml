@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="@string/pref_switch_one_key"
+            android:title="@string/pref_switch_one_title"
+            android:defaultValue="false"
+            android:summary="@string/pref_switch_one_summary"
+            />
+        <CheckBoxPreference
+            android:key="@string/pref_checkbox_one_key"
+            android:title="@string/pref_checkbox_one_title"
+            android:defaultValue="false"
+            android:summary="@string/pref_checkbox_one_summary"
+            />
+        <CheckBoxPreference
+            android:key="@string/pref_checkbox_two_key"
+            android:title="@string/pref_checkbox_two_title"
+            android:defaultValue="false"
+            android:summary="@string/pref_checkbox_two_summary"
+
+            />
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="@string/pref_switch_two_key"
+            android:title="Setting"
+            android:defaultValue="false"
+            android:summary="Setting for something else"
+            />
+
+</PreferenceScreen>
