@@ -9,8 +9,8 @@
             />
 
         <PreferenceCategory
-            android:title="Advanced Settings"
-            android:key="pref_category_one" >            >
+            android:title="@string/pref_category_one_title"
+            android:key="@string/pref_category_one_key" >
 
                 <CheckBoxPreference
                     android:key="@string/pref_checkbox_one_key"
@@ -28,9 +28,9 @@
 
         <android.support.v7.preference.SwitchPreferenceCompat
             android:key="@string/pref_switch_two_key"
-            android:title="Setting"
+            android:title="Setting Two"
             android:defaultValue="false"
-            android:summary="Setting for something else"
+            android:summary="@string/pref_switch_two_summary"
             />
 
 </PreferenceScreen>

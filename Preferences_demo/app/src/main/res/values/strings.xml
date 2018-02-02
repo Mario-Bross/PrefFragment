@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">Preferencies_demo</string>
 
+    <string name="pref_category_one_key">pref_category_one</string>
+    <string name="pref_category_one_title">Advanced Settings</string>
+
     <string name="pref_switch_one_key">switch_one</string>
-    <string name="pref_switch_one_title">Setting</string>
+    <string name="pref_switch_one_title">Setting One</string>
     <string name="pref_switch_one_summary">Turn on to see more options</string>
 
     <string name="pref_switch_two_key">switch_two</string>
-    <string name="pref_switch_two_title">Setting</string>
+    <string name="pref_switch_two_title">Setting Two</string>
     <string name="pref_switch_two_summary">Setting for something else</string>
 
     <string name="pref_checkbox_one_key">checkbox_one</string>

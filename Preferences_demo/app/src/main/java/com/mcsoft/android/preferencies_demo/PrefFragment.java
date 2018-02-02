@@ -34,7 +34,7 @@ public class PrefFragment extends PreferenceFragmentCompat {
         boolean isChecked = preference.isChecked();
         Preference checkbox1 = findPreference(getString(R.string.pref_checkbox_one_key));
         Preference checkbox2 = findPreference(getString(R.string.pref_checkbox_two_key));
-        Preference category = findPreference("pref_category_one");
+        Preference category = findPreference(getString(R.string.pref_category_one_key));
         checkbox1.setVisible(isChecked);
         checkbox2.setVisible(isChecked);
         category.setVisible(isChecked);
