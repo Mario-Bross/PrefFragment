@@ -7,19 +7,25 @@
             android:defaultValue="false"
             android:summary="@string/pref_switch_one_summary"
             />
-        <CheckBoxPreference
-            android:key="@string/pref_checkbox_one_key"
-            android:title="@string/pref_checkbox_one_title"
-            android:defaultValue="false"
-            android:summary="@string/pref_checkbox_one_summary"
-            />
-        <CheckBoxPreference
-            android:key="@string/pref_checkbox_two_key"
-            android:title="@string/pref_checkbox_two_title"
-            android:defaultValue="false"
-            android:summary="@string/pref_checkbox_two_summary"
 
-            />
+        <PreferenceCategory
+            android:title="Advanced Settings"
+            android:key="pref_category_one" >            >
+
+                <CheckBoxPreference
+                    android:key="@string/pref_checkbox_one_key"
+                    android:title="@string/pref_checkbox_one_title"
+                    android:defaultValue="false"
+                    android:summary="@string/pref_checkbox_one_summary"
+                    />
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="@string/pref_checkbox_two_key"
+                    android:summary="@string/pref_checkbox_two_summary"
+                    android:title="@string/pref_checkbox_two_title"
+                    />
+        </PreferenceCategory>
+
         <android.support.v7.preference.SwitchPreferenceCompat
             android:key="@string/pref_switch_two_key"
             android:title="Setting"

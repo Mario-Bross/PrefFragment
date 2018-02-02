@@ -1,6 +1,7 @@
 package com.mcsoft.android.preferencies_demo;
 
 import android.os.Bundle;
+import android.preference.PreferenceCategory;
 import android.preference.SwitchPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
@@ -17,24 +18,15 @@ public class PrefFragment extends PreferenceFragmentCompat {
 
         addPreferencesFromResource(R.xml.pref_settings);
         PreferenceScreen preferenceScreen = getPreferenceScreen();
-
-        int count = preferenceScreen.getPreferenceCount();
-        String switchKeyName = getResources().getString(R.string.pref_switch_one_key);
-        for (int i = 0; i < count; i++) {
-            Preference preference = preferenceScreen.getPreference(i);
-            String keyName = preference.getKey();
-            if (switchKeyName.equals(keyName)) {
-                SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat) preference;
-                switchPreferenceCompat.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-                    @Override
-                    public boolean onPreferenceClick(Preference preference) {
-                        setCheckBoxVisibility((SwitchPreferenceCompat) preference);
-                        return true;
-                    }
-                });
+        Preference settingsSwitch = preferenceScreen.findPreference(getString(R.string.pref_switch_one_key));
+        setCheckBoxVisibility((SwitchPreferenceCompat) settingsSwitch);
+        settingsSwitch.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
                 setCheckBoxVisibility((SwitchPreferenceCompat) preference);
+                return true;
             }
-        }
+        });
     }
 
 
@@ -42,7 +34,9 @@ public class PrefFragment extends PreferenceFragmentCompat {
         boolean isChecked = preference.isChecked();
         Preference checkbox1 = findPreference(getString(R.string.pref_checkbox_one_key));
         Preference checkbox2 = findPreference(getString(R.string.pref_checkbox_two_key));
+        Preference category = findPreference("pref_category_one");
         checkbox1.setVisible(isChecked);
         checkbox2.setVisible(isChecked);
+        category.setVisible(isChecked);
     }
 }
